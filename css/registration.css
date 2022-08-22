@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.auth-window {
+  width: 25%;
+  height: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-content {
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-logo {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.window-logo > img {
+  width: 80%;
+}
+
+.input-box {
+  margin-top: 20px;
+  width: 90%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-input {
+  height: 45px;
+  width: 90%;
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 17px;
+}
+
+.email-input::placeholder {
+  font-size: 17px;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.forgot-email {
+  margin-top: 0;
+}
+
+.auth-content > p {
+  align-self: flex-start;
+  margin-left: 5%;
+  font-size: 15px;
+  width: 80%;
+}
+
+.forgot-email {
+  margin-top: 40px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.auth-content > p > a {
+  text-decoration: none;
+  color: blue;
+}
+
+button {
+  border: 0;
+  width: 40%;
+}
+
+.buttons {
+  width: 90%;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registration {
+  background: 0;
+  font-size: 15px;
+}
+
+.registration a {
+  text-decoration: none;
+  color: blue;
+}
+
+.a-next {
+  width: 30%;
+}
+
+.next {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  background: #3535ff;
+  color: white;
+}
+
+.error {
+  margin-top: 20px;
+  display: none;
+  color: red;
+
+}
+
+.forgot-password {
+  display: none;
+}

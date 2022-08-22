@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap')
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 1920px;
+  margin: 0 auto;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0s visibility, 0.1s opacity linear;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 111px;
+  background: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -15px;
+}
+
+.header-menu
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 58%;
+
+}
+
+.header-menu ul
+{
+  display: flex;
+  list-style-type: none;
+
+  color: white;
+}
+
+.header-menu > ul > li
+{
+  margin-left: 12.4%;
+}
+
+.header-menu > ul > li:first-child {
+  margin-left: 0;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+}
+
+.header-tools input {
+  border: 0;
+  background: 0;
+  color: white;
+
+  width: 30%;
+}
+
+.header-tools input::placeholder {
+  color: white;
+}
+
+.header-logo {
+  margin-left: 6%;
+}
+
+.search-icon {
+  margin-right: 6%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.header-autorization {
+  display: flex;
+  justify-content: space-between;
+
+  width: 66%;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 27%;
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h2 {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+main p {
+  margin: 30px;
+  margin-bottom: 40px;
+}
+
+.sender {
+  width: 30%;
+  height: 85px;
+  background: black;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sender input {
+  width: 47%;
+  height: 45px;
+
+  border: 1px solid grey;
+}
+
+.sender input::placeholder {
+  padding-left: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#send {
+  width: 38%;
+}
+
+#send > button:hover {
+  color: black;
+  background: white;
+}
+
+#send button {
+  width: 100%;
+  height: 45px;
+
+  background: #333333;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  transition: 0.4s all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer > hr {
+  width: 58%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  background: black;
+}
+
+.footer-content {
+  width: 58%;
+  margin-top: 90px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.useful-links {
+  width: 23%;
+}
+
+.useful-links hr {
+  background: black;
+
+  margin-bottom: 30px;
+}
+
+.useful-links ul {
+  list-style-type: none;
+}
+
+.useful-links > ul > li {
+  font-size: 14px;
+
+  margin-bottom: 15px;
+}
+
+.payment {
+  width: 23%;
+}
+
+.payment hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.payment p {
+  margin-bottom: 21px;
+
+  font-size: 14px;
+}
+
+.payment-imgs > img{
+  margin-left: 20px;
+}
+
+.contacts {
+  width: 23%;
+}
+
+.contacts hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.contacts p {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+
+.contacts ul {
+  list-style-type: none;
+}
+
+.contacts > ul > li {
+  margin-bottom: 15px;
+}
+
+.contacts > ul > li > p > img {
+  margin-right: 20px;
+}
+
+.social {
+  width: 23%;
+}
+
+.social hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.social p {
+  margin-bottom: 23px;
+
+  font-size: 14px;
+}
+
+.social-imgs img{
+  margin-right: 20px;
+}
+
+.footer-info {
+  width: 58%;
+
+  display: flex;
+  justify-content: space-between;
+}

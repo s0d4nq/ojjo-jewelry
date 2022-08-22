@@ -1,0 +1,946 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+
+.box
+{
+  width: 1920px;
+  margin: 0 auto;
+
+  visibility: visible;
+  opacity: 0;
+  transition: 0s visibility, 0.1s opacity linear;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+header
+{
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background: url("../img/index/header-bg.png");
+
+  color: white;
+}
+
+.header-menu
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 58%;
+
+  margin-top: 15px;
+}
+
+.header-menu ul
+{
+  display: flex;
+  list-style-type: none;
+
+}
+
+.header-menu > ul > a
+{
+  margin-left: 12.4%;
+
+  text-decoration: none;
+  color: white;
+}
+
+.header-menu > ul > a:first-child {
+  margin-left: 0;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+}
+
+.header-tools input {
+  border: 0;
+  background: 0;
+  color: white;
+
+  width: 30%;
+}
+
+.header-tools input::placeholder {
+  color: white;
+}
+
+.header-logo {
+  margin-left: 6%;
+}
+
+.search-icon {
+  margin-right: 18%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.header-autorization {
+  display: flex;
+  justify-content: space-between;
+
+  width: 66%;
+}
+
+.header-autorization a{
+  text-decoration: none;
+  color: white;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 27%;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 320px;
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.header-main a {
+  width: 13.5%;
+  height: 51px;
+}
+
+.header-catalog {
+  width: 100%;
+  height: 51px;
+
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 1px solid white;
+
+  transition: 0.4s all;
+}
+
+.header-catalog:hover {
+  color: black;
+  background: white;
+}
+
+.header-catalog p{
+  color: white;
+  font-size: 18px;
+}
+
+.partners {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid white;
+}
+
+.partners > div {
+  width: 59%;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-partner {
+  padding: 1%;
+
+  border-right: 1px solid white;
+}
+
+.header-partner:last-child {
+  border-right: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-events {
+  width: 57%;
+
+  margin-top: 130px;
+}
+
+.main-events p {
+  text-align: center;
+}
+
+.main-events > p:first-child {
+  margin-bottom: 15px;
+
+  font-size: 21px;
+}
+
+.main-events > p:nth-child(2) {
+  font-size: 30px;
+}
+
+.main-categories {
+  width: 100%;
+}
+
+.main-categories > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 55px;
+
+  list-style-type: none;
+}
+
+.main-categories > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15%;
+  height: 61px;
+  border: 1px solid grey;
+
+  box-shadow: 4px 4px 0px 0px grey;
+
+  font-size: 18px;
+}
+
+.main-categories > ul > li:first-child {
+  box-shadow: 0;
+}
+
+.category-selected {
+  background: black;
+  color: white;
+}
+
+.main-catalog {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  transition: 0.4s all;
+}
+
+.catalog {
+  height: 280px;
+  width: 31.5%;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  color: white;
+  font-size: 24px;
+  padding-bottom: 30px;
+  transition: 0.4s all;
+}
+
+.catalog:hover {
+  transform: scale(1.1);
+}
+
+.catalog-rings {
+  background-image: url("../img/index/rings.png");
+}
+
+.catalog-earrings {
+  background-image: url("../img/index/earrings.png");
+}
+
+.catalog-pendants {
+  background-image: url("../img/index/pendants.png");
+}
+
+.catalog-cufflinks {
+  background-image: url("../img/index/cufflinks.png");
+}
+
+.catalog-bracelets {
+  background-image: url("../img/index/bracelets.png");
+}
+
+.catalog-clocks {
+  background-image: url("../img/index/clocks.png");
+}
+
+.main-salons {
+  background: url("../img/index/salons-bg.png");
+  height: 541px;
+  width: 100%;
+  color: white;
+
+  margin-top: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.salons-content {
+  width: 38%;
+  height: 341px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.salons-content p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.salons-content p:first-child {
+  font-size: 21px;
+}
+
+.salons-content a {
+  display: flex;
+  justify-content: center;
+
+  text-decoration: none;
+
+  width: 100%;
+}
+
+.salons-content button {
+  width: 31%;
+  height: 51px;
+
+  border: 1px solid gray;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.salons-content button:hover {
+  color: white;
+  border: 0;
+  background: #333333;
+}
+
+.main-articles {
+  width: 57.8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 120px;
+}
+
+.main-articles h2 {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.main-articles > p {
+  font-size: 21px;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.articles {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.articles > article:first-child {
+  background-image: url("../img/index/article-1.png");
+}
+
+.articles > article:nth-child(2) {
+  background-image: url("../img/index/article-2.png");
+}
+
+.articles > article:last-child {
+  background-image: url("../img/index/article-3.png");
+}
+
+.articles article {
+  width: 31%;
+  height: 370px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.articles > article > p {
+  width: 44%;
+  margin-bottom: 35px;
+
+  color: white;
+}
+
+.main-articles a {
+  width: 23%;
+  text-decoration: none;
+}
+
+.main-articles button {
+  width: 100%;
+  height: 51px;
+
+  background: #333333;
+  border: 1px solid #333333;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  transition: all 0.5s;
+}
+
+article:hover {
+  transition: 0.2s all linear;
+  transform: scale(1.1);
+}
+
+
+.main-articles button:hover {
+  color: #333333;
+  background: white;
+
+}
+
+.main-social {
+  width: 58.8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 150px;
+}
+
+.main-social > p {
+  margin-bottom: 15px;
+}
+
+.main-social > h2 {
+  margin-bottom: 60px;
+}
+
+.social-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-feedback {
+  background-image: url("../img/index/salons-bg.png");
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.feedback-content {
+  width: 58.8%;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-content > p {
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+.feedback-content > h2 {
+  margin-bottom: 60px;
+}
+
+.mailing {
+  width: 70%;
+  margin-bottom: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mailing ul {
+  list-style-image: url("../img/index/mailing-style.png");
+}
+
+.mailing > ul > li {
+  margin-bottom: 10px;
+}
+
+.sender {
+  width: 54%;
+  height: 85px;
+  background: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sender input {
+  width: 47%;
+  height: 45px;
+
+  border: 1px solid grey;
+}
+
+.sender input::placeholder {
+  padding-left: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#send {
+  width: 38%;
+}
+
+#send > button:hover {
+  color: black;
+  background: white;
+}
+
+#send button {
+  width: 100%;
+  height: 45px;
+
+  background: #333333;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  transition: 0.4s all;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer > hr {
+  width: 58%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  background: black;
+}
+
+.footer-content {
+  width: 58%;
+  margin-top: 90px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.useful-links {
+  width: 23%;
+}
+
+.useful-links hr {
+  background: black;
+
+  margin-bottom: 30px;
+}
+
+.useful-links ul {
+  list-style-type: none;
+}
+
+.useful-links > ul > li {
+  font-size: 14px;
+
+  margin-bottom: 15px;
+}
+
+.useful-links > ul > li:hover {
+  transform: scale(1.3);
+  transition: 0.2s all;
+}
+
+.payment {
+  width: 23%;
+}
+
+.payment hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.payment p {
+  margin-bottom: 21px;
+
+  font-size: 14px;
+}
+
+.payment-imgs > img{
+  margin-left: 20px;
+}
+
+.contacts {
+  width: 23%;
+}
+
+.contacts hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.contacts p {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+
+.contacts ul {
+  list-style-type: none;
+}
+
+.contacts > ul > li {
+  margin-bottom: 15px;
+}
+
+.contacts > ul > li > p:hover {
+  transform: scale(1.2);
+  transition: 0.3s all;
+}
+
+.contacts > ul > li > p > img {
+  margin-right: 20px;
+}
+
+.social {
+  width: 23%;
+}
+
+.social hr {
+  margin-bottom: 30px;
+
+  background: black;
+}
+
+.social p {
+  margin-bottom: 23px;
+
+  font-size: 14px;
+}
+
+.social-imgs img{
+  margin-right: 20px;
+}
+
+.social-imgs img:hover {
+  transform: scale(1.3);
+  transition: 0.2s all;
+}
+
+.footer-info {
+  width: 58%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
